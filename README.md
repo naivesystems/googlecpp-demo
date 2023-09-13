@@ -1,23 +1,20 @@
 # Google C++ Demo Guide
 
-## Running Code Analysis with GitHub Actions
+This demo illustrates how to seamlessly integrate static code analysis into
+your [GitHub Actions](https://docs.github.com/en/actions) workflow using the
+[Google C++ Analyzer](https://github.com/naivesystems/googlecpp). By following
+this guide, you can improve the code quality of your C++ projects and ensure
+they adhere to the Google C++ Style Guide.
 
-[Google C++ Analyzer](https://github.com/naivesystems/googlecpp) can be
-seamlessly integrated into your
-[GitHub Actions](https://docs.github.com/en/actions) workflow. Please refer to
-`//.github/workflows/googlecpp-analyzer.yml` for sample workflow configurations
-and trigger conditions.
+## Getting Started
 
-## Manually Building and Running Google C++ Analyzer Locally
+To get started with static code analysis using the Google C++ Analyzer in your
+GitHub Actions workflow, follow these steps:
 
-1. Clone the [Google C++ Analyzer](https://github.com/naivesystems/googlecpp)
-repository locally and run `make` to build the
-image. The default image name will be `naive.systems/analyzer/googlecpp:prod`.
+1. Check Rules File: Before running the analysis, make sure to create a
+directory path named `//.naivesystems/check_rules` at the root of your project
+and define your desired check rules in it. For example:
 
-2. Clone this repository to your local machine.
-
-3. Create a directory path named `//.naivesystems/check_rules` and define your
-check rules within the file named `check_rules`. For example:
 ```
 googlecpp/g1168
 googlecpp/g1190
@@ -26,17 +23,20 @@ googlecpp/g1194
 googlecpp/g1203
 ```
 
-4. In the root directory of this repository, run the following command:
-```
-mkdir -p output && \
-podman run --rm -v $PWD:/src:O -v $PWD/.naivesystems:/config:Z \
-  -v $PWD/output:/output:Z \
-  naive.systems/analyzer/googlecpp:prod \
-  /opt/naivesystems/misra_analyzer -show_results
-```
+These rules will guide the Google C++ Analyzer in checking your code against
+the Google C++ Style Guide.
 
-5. Once the code analysis is completed, the results will be saved in
-`//output/results.nsa_results`. Example of the results:
+2. Workflow Configuration: Refer to the sample workflow configuration in
+`//.github/workflows/googlecpp-analyzer.yml` for inspiration on how to set up
+your own workflow. This file provides example workflow configurations and
+trigger conditions.
+
+## Analysis Results
+
+Once the code analysis is completed as part of your GitHub Actions workflow,
+the results will be saved in the `//.output/results.nsa_results` file. Here is
+an example of what the results may look like:
+
 ```
 /src/demo.cc:13: [G1168][googlecpp-g1168]: Do not define implicit conversions. Use the explicit keyword for conversion operators and single-argument constructors
 

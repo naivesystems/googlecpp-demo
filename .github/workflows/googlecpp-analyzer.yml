@@ -1,0 +1,20 @@
+name: Run static analysis with Google C++ Analyzer
+on: [push]
+
+jobs:
+  static-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build Google C++ Analyzer
+        uses: naivesystems/googlecpp@main
+
+      - name: Run static analysis
+        run: |
+          mkdir -p output
+          podman run --rm -v $PWD:/src:O -v $PWD/.naivesystems:/config:Z \
+            -v $PWD/output:/output:Z \
+            naive.systems/analyzer/googlecpp:prod \
+            /opt/naivesystems/misra_analyzer -show_results
