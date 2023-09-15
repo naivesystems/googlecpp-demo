@@ -8,5 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - run: echo "::add-matcher::matcher.json"
+
       - name: Build Google C++ Analyzer
         uses: naivesystems/googlecpp@5411f5553462324b5875d409bfac7699510b8e26
