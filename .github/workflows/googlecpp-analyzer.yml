@@ -9,4 +9,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Google C++ Analyzer
-        uses: naivesystems/googlecpp@f024dca79b5d34e03a15bba13b2c1877d2690524
+        uses: naivesystems/googlecpp@1e22ad00d64d9ba07190bf513e504daf3e025f63
