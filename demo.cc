@@ -10,9 +10,9 @@ struct Point {
 
 class Base {
   public:
-    Base(int n) { data_ = n; }
+    Base(int n) { data_ = n; }  // test
     explicit Base(int x, int y) { data_ = x + y; }
-    virtual bool Equal(Base* other = nullptr) = 0;
+    virtual bool Equal(Base* other = nullptr) = 0;  // test
 
   private:
     int data_;
