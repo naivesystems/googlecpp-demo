@@ -8,10 +8,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run Google C++ Analyzer
-        uses: naivesystems/googlecpp@d556056dd8c86a3677490bcb31b3e67e26942811
-
       - name: Print environment variables
         run: |
           echo "GitHub SHA: ${{ github.sha }}"
           echo "Pull Request Head SHA: ${{ github.event.pull_request.head.sha }}"
+
+      - name: Run Google C++ Analyzer
+        uses: naivesystems/googlecpp@d556056dd8c86a3677490bcb31b3e67e26942811
