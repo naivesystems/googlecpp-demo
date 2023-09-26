@@ -1,5 +1,5 @@
 name: Run static analysis with Google C++ Analyzer
-on: [push]
+on: [pull_request]
 
 jobs:
   static-analysis:
