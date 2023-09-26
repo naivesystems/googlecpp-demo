@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Google C++ Analyzer
-        uses: naivesystems/googlecpp@266c8766a7e69abb92aa5a8097dfef614c497187
+        uses: naivesystems/googlecpp@fb8f3e741467d8fbcafe04aa558dc6bb46117cb0
         with:
           base-commit-sha: 4b825dc642cb6eb9a060e54bf8d69288fbee4904
           head-commit-sha: c4620125c7b2
