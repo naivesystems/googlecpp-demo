@@ -8,5 +8,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Run Google C++ Analyzer
         uses: naivesystems/googlecpp@af4479660238508ebae69b7b908a090434020b24
