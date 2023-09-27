@@ -1,0 +1,5 @@
+name: 'Google C++'
+description: 'Run static analysis'
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/naivesystems/googlecpp:v0.1.0'

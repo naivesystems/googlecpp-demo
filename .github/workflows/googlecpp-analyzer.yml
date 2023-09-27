@@ -16,4 +16,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Google C++ Analyzer
-        uses: naivesystems/googlecpp@af4479660238508ebae69b7b908a090434020b24
+        uses: ./action
