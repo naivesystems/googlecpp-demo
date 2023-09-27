@@ -15,8 +15,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pull private package
-        run: docker pull ghcr.io/naivesystems/googlecpp:v0.1.0
-
       - name: Run Google C++ Analyzer
-        uses: ./action
+        uses: docker://ghcr.io/naivesystems/googlecpp:v0.1.0
