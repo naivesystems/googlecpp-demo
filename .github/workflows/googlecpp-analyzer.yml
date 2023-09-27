@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull private package
-        run: docker pull ghcr.io/naivesystems/googlecpp:v0.1.1
+        run: docker pull ghcr.io/naivesystems/googlecpp:v0.1.2
 
       - name: Run Google C++ Analyzer
         uses: ./action
