@@ -10,10 +10,5 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Print environment variables
-        run: |
-          echo "Pull Request Base SHA: ${{ github.event.pull_request.base.sha }}"
-          echo "Pull Request Head SHA: ${{ github.event.pull_request.head.sha }}"
-
       - name: Run Google C++ Analyzer
         uses: naivesystems/googlecpp@200569d8d5e2b4330127c4bc28bb88c81fc3114a
