@@ -9,6 +9,29 @@ In our documentation, we will use `//` to denote the root of repositories.
 
 ## Getting Started
 
+```yaml
+name: Google C++ Style Analysis
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Perform Google C++ Style Analysis
+        uses: naivesystems/googlecpp-action@2023.3.0.0
+```
+
 Use [`//.github/workflows/googlecpp-analysis.yml`](https://github.com/naivesystems/googlecpp-demo/blob/main/.github/workflows/googlecpp-analysis.yml)
 as a template to run Google C++ Style Analysis in GitHub Actions. Make sure
 to use the `fetch-depth: 0` option provided by `actions/checkout`.
