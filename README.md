@@ -7,11 +7,13 @@ in your own repository.
 NOTE:
 In our documentation, we will use `//` to denote the root of repositories.
 
+## Getting Started
+
 Use [`//.github/workflows/googlecpp-analysis.yml`](https://github.com/naivesystems/googlecpp-demo/blob/main/.github/workflows/googlecpp-analysis.yml)
 as a template to run Google C++ Style Analysis in GitHub Actions. Make sure
 to use the `fetch-depth: 0` option provided by `actions/checkout`.
 
-## Analysis Results
+### Analysis Results
 
 Analysis results are currently shown as GitHub Actions annotations. A custom
 [problem matcher](https://github.com/naivesystems/googlecpp-image/blob/main/matcher.json)
@@ -24,7 +26,7 @@ Put a screenshot here.
 TODO:
 Publish SARIF and integrate with GitHub Code Scanning.
 
-## Rule Settings
+### Rule Settings
 
 By default, all guidelines (a.k.a. rules) in [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 are enforced by the analyzer. To customize the set of rules to use or specific
