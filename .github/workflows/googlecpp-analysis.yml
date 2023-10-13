@@ -17,4 +17,4 @@ jobs:
           fetch-depth: 0
 
       - name: Perform Google C++ Style Analysis
-        uses: naivesystems/googlecpp-action@2023.3.0.0
+        uses: naivesystems/googlecpp-action@2023.3.0.695501
