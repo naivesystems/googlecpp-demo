@@ -16,5 +16,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Perform Google C++ Style Analysis
-        uses: naivesystems/googlecpp-action@2023.3.0.695501
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull private package
+        run: docker pull ghcr.io/naivesystems/googlecpp:v0.1.17
+
+      - name: Run Google C++ Analyzer
+        uses: ./action
