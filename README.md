@@ -56,5 +56,5 @@ are enforced by the analyzer. To customize the set of rules to use or specific
 rule settings, create a configuration file at `//.naivesystems/check_rules` in
 your repository. The complete set of rules is listed [here](https://github.com/naivesystems/googlecpp-image/blob/main/google_cpp.check_rules.txt).
 
-TODO:
-Publish the correspondence between the rule IDs and the actual rule texts.
+A table documenting the correspondence between the rule IDs and the actual rule
+texts can be found [here](https://github.com/naivesystems/googlecpp/blob/main/google_cpp.check_rules.md).
