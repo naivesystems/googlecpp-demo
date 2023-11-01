@@ -1,2 +1,2 @@
 all:
-	clang -c demo.cc
+	clang -c -std=c++17 bad.cc
