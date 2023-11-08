@@ -29,7 +29,7 @@ jobs:
           fetch-depth: 0
 
       - name: Perform Google C++ Style Analysis
-        uses: naivesystems/googlecpp-action@2023.3.0.0
+        uses: naivesystems/googlecpp-action@2023.3.2.0
 ```
 
 Use [`//.github/workflows/googlecpp-analysis.yml`](https://github.com/naivesystems/googlecpp-demo/blob/main/.github/workflows/googlecpp-analysis.yml)
