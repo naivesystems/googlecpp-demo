@@ -43,7 +43,7 @@ Analysis results are currently shown as GitHub Actions annotations. A custom
 is used for this purpose, so there is a limit of 10 reported results per run.
 Only results relevant to the current code changes are reported.
 
-| ![a1](https://github.com/naivesystems/googlecpp-demo/assets/196279/79e2584f-e1d1-457a-9994-0c7bf1db7db3)  | ![a2](https://github.com/naivesystems/googlecpp-demo/assets/196279/05cf5d28-6daa-4744-a05a-39d4382b383f) |
+| ![a1](https://github.com/naivesystems/googlecpp-demo/assets/196279/3a5ce522-14ca-4393-8bdf-541a29e653d9)  | ![a2](https://github.com/naivesystems/googlecpp-demo/assets/196279/3c800ab8-fab9-4437-8f53-b0d0f0580f27) |
 | ------------- | ------------- |
 
 TODO:
