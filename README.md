@@ -1,7 +1,7 @@
 # Demo of Google C++ Style Analysis
 
 This is a demo repository to show how to use NaiveSystems Analyze to enforce
-[Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+[Google C++ Style Guide](https://naive.systems/styleguide/cppguide.html)
 in your own repository.
 
 NOTE:
@@ -43,15 +43,15 @@ Analysis results are currently shown as GitHub Actions annotations. A custom
 is used for this purpose, so there is a limit of 10 reported results per run.
 Only results relevant to the current code changes are reported.
 
-TODO:
-Put a screenshot here.
+| ![a1](https://github.com/naivesystems/googlecpp-demo/assets/196279/79e2584f-e1d1-457a-9994-0c7bf1db7db3)  | ![a2](https://github.com/naivesystems/googlecpp-demo/assets/196279/05cf5d28-6daa-4744-a05a-39d4382b383f) |
+| ------------- | ------------- |
 
 TODO:
 Publish SARIF and integrate with GitHub Code Scanning.
 
 ### Rule Settings
 
-By default, all guidelines (a.k.a. rules) in [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+By default, all guidelines (a.k.a. rules) in [Google C++ Style Guide](https://naive.systems/styleguide/cppguide.html)
 are enforced by the analyzer. To customize the set of rules to use or specific
 rule settings, create a configuration file at `//.naivesystems/check_rules` in
 your repository. The complete set of rules is listed [here](https://github.com/naivesystems/googlecpp-image/blob/main/google_cpp.check_rules.txt).
